@@ -16,7 +16,9 @@ const Task = ({
 }) => {
   const setNewTitle = () => {
     const newTitle = window.prompt("Текст задачи", text);
-    onEditTask(list.id, id, newTitle);
+    if (newTitle) {
+      onEditTask(list.id, id, newTitle);
+    } else alert("Название задачи не может быть пустым");
   };
 
   return (
