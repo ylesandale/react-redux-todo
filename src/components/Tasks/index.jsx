@@ -18,6 +18,8 @@ const Tasks = ({ list, onEdit, onAddTask, withoutEmpty }) => {
     const newTitle = window.prompt("Название спсика", list.name);
     if (newTitle) {
       onEdit(list.id, newTitle);
+    } else {
+      alert("Название списка не может быть пустым");
     }
   };
 
